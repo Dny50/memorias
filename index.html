@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Para Ti ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+      background: linear-gradient(to top, #020111 0%, #191970 40%, #ff7e5f 70%, #feb47b 100%);
+      min-height: 100vh;
+    }
+
+    /* Estrellas */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(2px 2px at 20% 30%, white, transparent),
+                  radial-gradient(2px 2px at 80% 20%, white, transparent),
+                  radial-gradient(1.5px 1.5px at 50% 10%, white, transparent),
+                  radial-gradient(2px 2px at 70% 60%, white, transparent),
+                  radial-gradient(1.5px 1.5px at 30% 70%, white, transparent);
+      opacity: 0.6;
+      z-index: 0;
+    }
+
+    /* Montañas */
+    .mountains {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 35vh;
+      background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+      clip-path: polygon(0 80%, 10% 70%, 25% 75%, 40% 65%, 55% 70%, 70% 60%, 85% 68%, 100% 55%, 100% 100%, 0 100%);
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      padding: 40px 20px 120px;
+    }
+
+    h1 {
+      font-size: 2.7rem;
+      margin-bottom: 20px;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+
+    .message {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      line-height: 1.7;
+      background: rgba(0,0,0,0.35);
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+      backdrop-filter: blur(4px);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto 50px auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 12px 20px rgba(0,0,0,0.5);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 18px 30px rgba(0,0,0,0.7);
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 1rem;
+      opacity: 0.85;
+      text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+    }
+
+    #playButton {
+      display: none;
+      margin: 20px auto 30px;
+      padding: 14px 28px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(to right, #ff5f9e, #ff9966);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+      transition: transform 0.2s ease;
+    }
+
+    #playButton:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="mountains"></div>
+
+  <div class="container">
+    <h1>Llevame a la noche en la que empezamos, lo que empezo todo esto entre los dos ❤️</h1>
+
+    <div class="message">
+        Hola preciosa, las fotos donde esta la cocina y la sala me hizo recordar cuando empezamos
+        cuando solo eramos tu y yo y nadie mas, recuerdas. Encerio te amo mucho preciosa demasiado que tengo miedo
+        de perderte porque lo que siento por ti es muy grande que si te pierdo no aguantaria, casi te pierdo una vez
+        y no quiero de nuevo, cuando nos despedimos ese dia ya no queria saber nada de nadie y ni de esta vida, fuiste
+        mi salvadora encerio y no quiero perder eso, y si, somos de polos opuestos, pero podemos mejorar por el bien de la relacion
+        y estar juntos para siempre, encerio te extraño mucho, no digo que no es bonito los momentos que tenemos pero los que 
+        teniamos en el inicio era diferente no se si tu lo sientes asi, como te digo solo eramos dos nada de amigos o amigas,
+        solo eramos tu y yo extraño esos momentos y noches, a lo que voy no quiero alejarme de ti. 💖
+    </div>
+
+    <button id="playButton">Reproducir música 🎵</button>
+
+    <div class="gallery">
+      <img src="WhatsApp Image 2026-01-20 at 10.13.30 PM copy.jpeg" alt="Foto 1">
+      <img src="WhatsApp Image 2026-01-20 at 10.19.34 PM.jpeg" alt="Foto 2">
+      <img src="WhatsApp Image 2026-01-20 at 10.53.14 PM.jpeg" alt="Foto 3">
+      <img src="WhatsApp Image 2026-01-20 at 10.53.20 PM.jpeg" alt="Foto 4">
+      <img src="WhatsApp Image 2026-01-20 at 10.53.44 PM copy.jpeg" alt="Foto 5">
+      <img src="WhatsApp Image 2026-01-20 at 10.53.57 PM.jpeg" alt="Foto 6">
+    </div>
+
+    <div class="footer">
+      Hecho con amor 💕
+    </div>
+  </div>
+
+  <audio id="bgMusic" autoplay loop>
+    <source src="Lord Huron - The Night We Met (Sub. Español  Lyrics).mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <script>
+    const audio = document.getElementById('bgMusic');
+    const playButton = document.getElementById('playButton');
+
+    audio.play().catch(() => {
+      playButton.style.display = 'block';
+    });
+
+    playButton.addEventListener('click', () => {
+      audio.play();
+      playButton.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
